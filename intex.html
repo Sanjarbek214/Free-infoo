@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Info - Your Source of Knowledge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #searchBar {
+            width: 90%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        section {
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        footer {
+            font-size: 14px;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Free Info!</h1>
+    <p>Your Source of Knowledge</p>
+</header>
+
+<!-- Qidiruv paneli -->
+<div style="text-align:center;">
+    <input type="text" id="searchBar" placeholder="Search..." onkeyup="searchContent()">
+</div>
+
+<nav>
+    <a href="#earth">Earth</a>
+    <a href="#space">Space</a>
+    <a href="#animals">Animals</a>
+    <a href="#history">History</a>
+</nav>
+
+<main>
+    <!-- Earth bo'limi -->
+    <section id="earth">
+        <h2>Earth</h2>
+        <p>Earth is the third planet from the Sun and the only known planet to support life. It has a diverse environment, with land, oceans, and atmosphere. Earth is home to billions of organisms, including plants, animals, and humans. Its surface is 71% water, and the remaining 29% is land, which consists of continents and islands. Earth is unique because it has an atmosphere that supports life, unlike any other planet in our solar system.</p>
+        
+        <h3>Interesting Facts About Earth</h3>
+        <ul>
+            <li>Earth has one natural satellite, the Moon, which helps stabilize the planet's axis.</li>
+            <li>The planet's core is made of molten iron and nickel, which generates Earth's magnetic field.</li>
+            <li>Earth's atmosphere is composed of 78% nitrogen, 21% oxygen, and traces of other gases.</li>
+            <li>The longest river on Earth is the Nile, with a length of approximately 6,650 kilometers.</li>
+            <li>The highest point on Earth is Mount Everest, located in the Himalayas, standing at 8,848 meters above sea level.</li>
+            <li>Earth is the only planet known to have liquid water on its surface, which is essential for life.</li>
+            <li>The Earth orbits the Sun at an average distance of about 150 million kilometers, a journey that takes about 365.25 days to complete.</li>
+            <li>The Earth's axial tilt is responsible for the changing seasons.</li>
+        </ul>
+
+        <h3>Geography of Earth</h3>
+        <p>Earth's surface is made up of landmasses and bodies of water. The continents, such as Africa, Asia, Europe, North America, South America, Antarctica, and Australia, are separated by oceans like the Atlantic, Pacific, Indian, Southern, and Arctic Oceans.</p>
+
+        <h3>Earth's Climate</h3>
+        <p>The climate on Earth is diverse, with different regions experiencing various weather patterns. The Earth's climate is affected by several factors, including latitude, altitude, proximity to oceans, and the presence of natural phenomena like volcanoes and storms.</p>
+
+        <h3>Life on Earth</h3>
+        <p>Earth supports a wide variety of life forms, from microscopic organisms to large mammals. The Earth's ecosystems are interconnected, with species depending on one another for survival. Human beings have also significantly impacted the environment through activities such as deforestation, pollution, and urbanization.</p>
+    </section>
+
+    <!-- Space bo'limi -->
+    <section id="space">
+        <h2>Space</h2>
+        <p>Space is a vast, seemingly infinite expanse that contains stars, planets, and other celestial bodies. It is also where space exploration and research take place.</p>
+    </section>
+
+    <!-- Animals bo'limi -->
+    <section id="animals">
+        <h2>Animals</h2>
+        <p>Animals are multicellular organisms that feed on organic material, breathe oxygen, and are capable of movement. They play an essential role in ecosystems.</p>
+    </section>
+
+    <!-- History bo'limi -->
+    <section id="history">
+        <h2>History</h2>
+        <p>History is the study of past events, particularly human civilization, and how they shaped the world we live in today. It encompasses a vast range of topics and cultures.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Free Info. All rights reserved.</p>
+</footer>
+
+<script>
+    function searchContent() {
+        let input = document.getElementById('searchBar').value.toLowerCase();
+        let sections = document.querySelectorAll('section');
+        
+        sections.forEach(function(section) {
+            let heading = section.querySelector('h2').textContent.toLowerCase();
+            let content = section.querySelector('p').textContent.toLowerCase();
+
+            if (heading.includes(input) || content.includes(input)) {
+                section.style.display = '';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+  </html>
+<!-- History bo'limi -->
+<section id="history">
+    <h2>History</h2>
+    <p>History is the study of past events, particularly human civilization, and how they shaped the world we live in today. It encompasses a vast range of topics and cultures.</p>
+    
+    <!-- Timurid Empire haqida qo'shimcha ma'lumot -->
+    <h3>Timurid Empire</h3>
+    <p>The Timurid Empire was a state founded by the Central Asian conqueror, Timur (also known as Tamerlane), in the 14th century. The empire extended from the eastern Mediterranean to India, and it is considered one of the most significant empires in the history of Central Asia.</p>
+
+    <h4>Key Facts About the Timurid Empire:</h4>
+    <ul>
+        <li>Timur, the founder of the empire, was born in 1336 in the city of Shahrisabz (present-day Uzbekistan).</li>
+        <li>The empire reached its peak during the reign of Timur, who was known for his military prowess and conquests, including campaigns in Persia, the Middle East, and India.</li>
+        <li>Timur was a descendant of Genghis Khan, and he sought to revive the Mongol Empire's glory while creating his own empire.</li>
+        <li>The Timurid Empire is known for its cultural achievements, particularly in architecture, art, and science.</li>
+        <li>One of the most famous Timurid rulers was Ulugh Beg, a Timurid prince and astronomer, who established an observatory in Samarkand, making significant contributions to astronomy and mathematics.</li>
+        <li>The empire eventually declined after Timur's death in 1405, but it laid the foundation for future empires, including the Mughal Empire in India.</li>
+    </ul>
+
+    <h4>Important Cities and Sites in the Timurid Empire:</h4>
+    <p>Some of the most notable cities of the Timurid Empire include:</p>
+    <ul>
+        <li><strong>Samarkand:</strong> The capital of the Timurid Empire and a center of culture and learning.</li>
+        <li><strong>Bukhara:</strong> Another important cultural and intellectual hub during the Timurid period.</li>
+        <li><strong>Herat:</strong> Known for its architectural beauty and as a center of Persian culture.</li>
+    </ul>
+
+    <h4>Timurid Architecture:</h4>
+    <p>Timurid architecture is characterized by the use of large domes, intricate tile work, and expansive courtyards. Some famous architectural sites built during the Timurid period include the Shah-i-Zinda complex in Samarkand and the Bibi-Khanym Mosque.</p>
+</section>
